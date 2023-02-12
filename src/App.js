@@ -9,11 +9,11 @@ const App = () => {
 
   // 네이티브로부터 메시지 수신
   // message 이벤트에 대한 리스너를 설정합니다.
-  // event.data로 메시지에 접근할 수 있습니다.
+  // event.data로 메시지에 접근할 수 있습니다. string이기 때문에 JSON으로 파싱해서 사용합니다.
   // 메시지의 type에 따라 어떤 액션을 취할지 작성합니다.
   const onMessage = () => {
     document.addEventListener('message', (event) => {
-      const message = event.data;
+      const message = JSON.parse(event.data);
 
       switch (message.type) {
         case 'saveUserInfoSuccess':
