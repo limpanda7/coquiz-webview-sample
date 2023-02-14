@@ -45,13 +45,14 @@ const App = () => {
       },
     };
     const stringMessage = JSON.stringify(message);
+    alert(stringMessage + '를 네이티브로 보냅니다.');
     window.ReactNativeWebView.postMessage(stringMessage);
   }
 
   return (
     <div>
       <h1>CoQuiz Webview Sample</h1>
-      <button onClick={postMessageToApp}>네이티브로 유저정보 전송</button>
+      <button onClick={postMessageToApp}>유저정보 전송</button>
     </div>
   );
 }
