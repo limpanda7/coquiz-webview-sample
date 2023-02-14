@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/coquiz-webview-sample/static/css/main.073c9b0a.css",
-    "main.js": "/coquiz-webview-sample/static/js/main.708282d4.js",
+    "main.js": "/coquiz-webview-sample/static/js/main.93a56601.js",
     "static/js/787.090e7c9d.chunk.js": "/coquiz-webview-sample/static/js/787.090e7c9d.chunk.js",
     "index.html": "/coquiz-webview-sample/index.html",
     "main.073c9b0a.css.map": "/coquiz-webview-sample/static/css/main.073c9b0a.css.map",
-    "main.708282d4.js.map": "/coquiz-webview-sample/static/js/main.708282d4.js.map",
+    "main.93a56601.js.map": "/coquiz-webview-sample/static/js/main.93a56601.js.map",
     "787.090e7c9d.chunk.js.map": "/coquiz-webview-sample/static/js/787.090e7c9d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.708282d4.js"
+    "static/js/main.93a56601.js"
   ]
 }
