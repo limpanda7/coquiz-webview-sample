@@ -34,16 +34,16 @@ const App = () => {
   // type은 string 입니다.
   // value는 string 또는 JSON 형태(key-value)입니다.
   // message를 string으로 변환하여 네이티브로 보냅니다.
-  const postMessageToApp = () => {
+
+  // 파라미터는 2개를 받습니다
+  // 첫 번째 파라미터: type (string)
+  // 두 번째 파라미터: value (string 또는 json)
+  function postMessageToApp(type, value) {
     const message = {
-      type: 'saveUserInfo',
-      value: {
-        id: 'limpanda7',
-        social: 'kakao',
-        mb_login_date: '2023-02-12 22:00:00',
-        mb_email: 'limpanda7@naver.com',
-      },
-    };
+      type: type,
+      value: value
+    }
+
     const stringMessage = JSON.stringify(message);
     alert(stringMessage + '를 네이티브로 보냅니다.');
     window.ReactNativeWebView.postMessage(stringMessage);
@@ -52,7 +52,8 @@ const App = () => {
   return (
     <div>
       <h1>CoQuiz Webview Sample</h1>
-      <button onClick={postMessageToApp}>유저정보 전송</button>
+      <button onClick={() => postMessageToApp('getUserMachin')}>기기 고유값 요청</button>
+      <button onClick={() => postMessageToApp('saveUserInfo', {mbId: 'limpanda7', mb_email:'limpanda7@naver.com'})}>회원 정보 저장</button>
     </div>
   );
 }
